@@ -41,6 +41,12 @@ app\mailers\inquiry_mailer.rb
 * Railsコンソールにて下記ファイルの２行を実行する
 test\mailers\previews\inquiry_mailer_preview.rb
 
+    #インスタンスを作成
+    inquiry = Inquiry.new(name: "何としてもGmailでメールを送りたい人", message: "聞こえますか・・・今、あなたのメールアドレスに直接語りかけています・・・・")
+    
+    #メール送信(Railsコンソールで実行)
+    InquiryMailer.send_mail(inquiry).deliver_now!
+
 ###### 新規アプリで実装する場合の参照手順
 https://www.sejuku.net/blog/48739  
 (その他テスト方法等も記載)
@@ -59,5 +65,3 @@ https://support.google.com/a/answer/6260879?hl=ja
 * app\mailers\inquiry_mailer.rb  
 に記載されている送信元を変更することで、送信元メールアドレスの指定が可能。 
 受信者はメールに対する返信も可能で、送信元アドレスに指定したアドレスへ返信される。  
-
-* ...
