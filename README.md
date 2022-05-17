@@ -41,11 +41,11 @@ app\mailers\inquiry_mailer.rb
 * Railsコンソールにて下記ファイルの２行を実行する
 test\mailers\previews\inquiry_mailer_preview.rb
 
-    #インスタンスを作成
-    inquiry = Inquiry.new(name: "何としてもGmailでメールを送りたい人", message: "聞こえますか・・・今、あなたのメールアドレスに直接語りかけています・・・・")
+    $#インスタンスを作成
+    $inquiry = Inquiry.new(name: "何としてもGmailでメールを送りたい人", message: "聞こえますか・・・今、あなたのメールアドレスに直接語りかけています・・・・")
     
-    #メール送信(Railsコンソールで実行)
-    InquiryMailer.send_mail(inquiry).deliver_now!
+    $#メール送信(Railsコンソールで実行)
+    $InquiryMailer.send_mail(inquiry).deliver_now!
 
 ###### 新規アプリで実装する場合の参照手順
 https://www.sejuku.net/blog/48739  
