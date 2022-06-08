@@ -28,7 +28,7 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = true
   # # #成功---------------------------------------------------------------------------
 
-  #成功(ALINCO)---------------------------------------------------------------------------
+  #成功(Gmail以外)---------------------------------------------------------------------------
   #メール設定
   #deviseが認証用のURLなどを生成するのに必要になる（らしい）
   config.action_mailer.default_url_options = {  host: 'localhost', port: 3000 }
@@ -41,13 +41,13 @@ Rails.application.configure do
   #送信方法として:smtpを指定した場合は、このconfigを使って送信詳細の設定を行います
   config.action_mailer.smtp_settings = {
     #gmail利用時はaddress,domain,portは下記で固定
-    address:'mail.securemx.jp',
-    domain: 'alinco.co.jp',
+    address:'<mail_service>',
+    domain: '<domain>',
     port:587,
     #gmailのユーザアカウント（xxxx@gmail.com)※念のため、credentials.yml.enc行き
-    user_name: 'hisanori-sato@alinco.co.jp',
+    user_name: '<email_address>',
     #gmail２段階認証回避のためにアプリケーションでの利用パスワードを取得、必ずcredentials.yml.endに設定を！！
-    password: 'elrh9L%wnyur',
+    password: '<password>',
     #パスワードをBase64でエンコード
     authentication: :login
     
@@ -175,20 +175,7 @@ Rails.application.configure do
   # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # config.action_mailer.asset_host = 'http://localhost:3000'
 
-    # #メール設定
-    # config.action_mailer.delivery_method = :smtp
-    # config.action_mailer.smtp_settings = {
-    # address:              'smtp.gmail.com',
-    # port:                  587,
-    # domain:               'gmail.com',
-    # user_name:            'hissabito.310@gmail.com',
-    # password:             'mystarpako2',
-    # authentication:       'plain',
-    # enable_starttls_auto:  true
-    # }
-    # cfxuwxfheskjcbpn
 
-  
 
 
 

@@ -3,22 +3,20 @@ class InquiryMailer < ApplicationMailer
         @inquiry = inquiry
         #ファイル添付(ファイル形式を維持して送付)
         attachments['Paplesマニュアル用.xlsx'] = {
-            :content => File.read('D:\Users\hisanori-sato\Desktop\Paplesマニュアル用.xlsx', :mode => 'rb'),
+            :content => File.read('D:\test.xlsx', :mode => 'rb'),
             :transfer_encoding => :binary
         }
         attachments['testdata_設計書取込 .csv'] = {
-            :content => File.read('D:\Users\hisanori-sato\Desktop\testdata_設計書取込 .csv', :mode => 'rb'),
+            :content => File.read('D:\test.csv', :mode => 'rb'),
             :transfer_encoding => :binary
         }
         attachments['sample.jpeg'] = {
-            :content => File.read('D:\Users\hisanori-sato\Desktop\sample.jpeg', :mode => 'rb'),
+            :content => File.read('D:\test.jpeg', :mode => 'rb'),
             :transfer_encoding => :binary
         }
         mail(
-            from: 'hissabito.310@gmail.com',
-            # from: 'hisanori-sato@alinco.co.jp',
-            # to:   'hissabito.310@gmail.com',
-            to:   'hisanori-sato@alinco.co.jp',
+            from: '<email_address>',
+            to:   '<email_address>',
             subject: 'mail送信テスト_From_Rails'
         )
     end
